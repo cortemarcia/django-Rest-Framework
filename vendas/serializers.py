@@ -6,7 +6,7 @@ from vendas.models import Venda
 
 class VendaSerializer(serializers.Serializer):
     produto=ProdutoSerializer()
-    deconto= serializers.IntegerField()
+    desconto= serializers.IntegerField()
     forma= serializers.ChoiceField(choices=Venda.formas)
     valor_total= serializers.DecimalField(max_digits=10, decimal_places=2)
 
