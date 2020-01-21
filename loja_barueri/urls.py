@@ -17,10 +17,12 @@ from django.contrib import admin
 from rest_framework import routers
 from produtos.views import ProdutoViewSet
 from django.urls import path, include
+from  vendas.views import VendaViewSet
 
 
 rota = routers.DefaultRouter()
 rota.register(r'produtos',ProdutoViewSet)
+rota.register(r'vendas',VendaViewSet)
 
 urlpatterns = [
     path(r'api/', include(rota.urls)),
